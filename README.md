@@ -7,6 +7,8 @@ los usuarios pueden registrarse por la pestaña de registro, y para obrener perm
 Hubo un intento de permitir que solo usuarios de role especificos, (es decir informatica, electronica, construccion, etc) puedan crear comunicados para esa area, como se puede ver en los permisos del usuario informaticopromedio. 
 no funciono.
 
+La pestaña de registro de usuario funcionaba hasta hace 15 minutos antes de la entrega. no se que la rompió, tampoco creo ser capaz de arreglarlo a este punto ni yo se como funciona mi codigo.
+
 Si bien se le pueden dar los permisos a los usuarios regulares (usuarios anonimos) para ver los comunicados, no pude implementar los comunicados al frontend por lo que no funciona
 está el codigo, simplemente me falló css, html, bootstrap y dios
 
