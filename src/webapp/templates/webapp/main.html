@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'webapp/styles.css' %}">
+
+
+</head>
+
+
+<body>
+    <script src="{% static 'webapp/js/bootstrap.js' %}"></script>
+
+    <div class="container-fluid" >
+        <div class="row" id="Header" >
+            <div class="col-4">
+                <img id="LOGO" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Logo_UTFSM.png/680px-Logo_UTFSM.png" alt="utfsm"></img>
+            </div>
+            <div class="col-8">
+                <h1>SISTEMA INTEGRADO DE NOTIFICACIONES</h1>
+            </div>
+        </div>
+        <ul class="nav justify-content-center" id="NAVBAR" style="background-color: rgb(209, 209, 209);">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin/">Administracion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register/">Registrarse</a>
+            </li>
+        </ul>    
+    <row-12>
+        <div class="dropdown" style="margin: 0.5cm;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Departamento
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="INF" href="#">INFORMATICA</a></li>
+              <li><a class="ELE" href="#">ELECTRONICA</a></li>
+              <li><a class="MEC" href="#">MECANICA</a></li>
+            </ul>
+          </div>
+    </row-12>
+
+
+    {% for comunicado in Comunicados %}
+    
+        <div class="col-sm-12 col-md-4" style="margin: 5px;">
+            
+                <div class="card-body">
+                  <h5 class="card-title">{{comunicado.titulo}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{comunicado.detalle_corto}}</h6>
+                  <p class="card-text">{{comunicado.detalle}}</p>
+                  <a href="#" class="card-link">{{comunicado.role}}</a>
+                </div>
+              
+        </div>
+        
+    {% endfor %}
+    
+      
+    </div>
+    <div>
+        <div class="col-xxl-12" style="margin: 5px;" >
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+
+</body>
+</html>
