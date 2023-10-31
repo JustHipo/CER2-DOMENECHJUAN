@@ -2,6 +2,22 @@
 
 PROYECTO FUNCIONANDO COMO DEBERIA: https://github.com/JustHipo/CER2-DOMENECHJUAN-FUNCIONA
 
+CAMBIOS SIMPLES HECHOS EN EL CODIGO FUNCIONANDO (hay otros pequeños cambios en la version funcionando, no importantes para el backend)
+main.html:
+editar referencias en el navbar:
+      linea 29 {% url 'home' %}
+      linea 32 {% url 'admin:index' %}
+      linea 35 {% url 'register' %}
+      linea 51 {% block content %}
+      linea 99 {% endblock %}
+views.py
+editar return del def home
+      linea 22 return render(request, 'webapp/main.html', DTS)
+      linea 64 return redirect(home)
+urls.py
+agregar el name a home
+      linea 13 path("home/", views.home, name="home"),
+
 certamen 2 juan francisco domenech. 
 La mayor parte del frontend no funciona, ya que no logra cargar correctamente los comunicados. 
 los comunicados pueden ser creados, modificados y publicados por un usuario staff, pero no aparecen en el frontend. solo en la pestaña de administrador
