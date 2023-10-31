@@ -1,4 +1,7 @@
 # CER2-DOMENECHJUAN
+
+PROYECTO FUNCIONANDO COMO DEBERIA: https://github.com/JustHipo/CER2-DOMENECHJUAN-FUNCIONA
+
 certamen 2 juan francisco domenech. 
 La mayor parte del frontend no funciona, ya que no logra cargar correctamente los comunicados. 
 los comunicados pueden ser creados, modificados y publicados por un usuario staff, pero no aparecen en el frontend. solo en la pestaña de administrador
